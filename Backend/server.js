@@ -1,8 +1,9 @@
 import "dotenv/config";
+import connectDB from "./db.js";  // ✅ This works now
+
 import express from "express";
 import cors from "cors";
 import multer from "multer";
-import connectDB from "./db.js";
 import ResearchPaper from "./Models/ResearchPaper.js";
 
 import { createHelia } from "helia";
@@ -13,7 +14,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// Connect to MongoDB
+
 connectDB();
 
 // File Upload Config (for research papers)

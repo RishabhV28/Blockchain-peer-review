@@ -5,6 +5,7 @@ import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 
 contract CertificateNFT is ERC721URIStorage, Ownable {
+    
     uint256 private _tokenIds;
     mapping(uint256 => bool) public revokedCertificates;
 
